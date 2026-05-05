@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP Studios - Proizvodi</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg custom-header py-3">
+    <div class="container-fluid px-lg-5">
+        
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                <li class="nav-item">
+                    <a class="nav-link nav-item-text active" href="proizvodi.html" title="Trenutno ste na početnoj strani">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-text" href="about.html" title="Saznajte više o meni">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-text" href="login.html" title="Prijavite se na svoj nalog">Login</a>
+                </li>
+            </ul>
+
+            <div class="mx-auto d-none d-lg-block">
+                <div class="search-container d-flex align-items-center">
+                    <input type="text" class="search-input" placeholder="Pretraži kurseve...">
+                    <img src="slike/src.svg" alt="Pretraga" class="search-icon">
+                </div>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <span class="logo-text fw-bold">KP studios</span>
+                <img src="slike/avatar.svg" alt="Korisnički profil" class="avatar-img" onclick="korpaopn()" style="cursor: pointer;" title="Prikaži ukupnu cenu">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5 flex-grow-1">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="content text-center m-0">Naši Kursevi</h1>
+        <a href="checkout.html" class="btn btn-success px-4 py-2 fw-bold" style="background-color: var(--tropico-color); border: none;">Idi na kasu</a>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/gcourse.png" alt="Kurs Gitare za početnike" class="img-fluid rounded">
+                <h3 class="mt-2">Osnove Gitare</h3>
+                <p>Naučite prve akorde i pravilno držanje instrumenta uz stručno vođstvo.</p>
+                <div class="price-row">
+                    <span class="price">45.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(45)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/advancedchords.png" alt="Napredni akordi na gitari" class="img-fluid rounded">
+                <h3 class="mt-2">Napredni Akordi</h3>
+                <p>Savladajte kompleksnije harmonije i barre akorde bez muke i nepotrebnog stresa.</p>
+                <div class="price-row">
+                    <span class="price">55.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(55)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/teorija.png" alt="Muzička teorija 101" class="img-fluid rounded">
+                <h3 class="mt-2">Muzička Teorija 101</h3>
+                <p>Sve što trebate znati o notama, ritmu i čitanju muzike na jednom mestu.</p>
+                <div class="price-row">
+                    <span class="price">39.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(39)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/piano.png" alt="Klavir za početnike" class="img-fluid rounded">
+                <h3 class="mt-2">Klavir za Početnike</h3>
+                <p>Prvi koraci na crno-belim dirkama uz jednostavne vežbe za obe ruke.</p>
+                <div class="price-row">
+                    <span class="price">50.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(50)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/singing.png" alt="Vokalne tehnike i pevanje" class="img-fluid rounded">
+                <h3 class="mt-2">Vokalne Tehnike</h3>
+                <p>Oslobodite svoj glas i naučite pravilno disanje i osnovne tehnike pevanja.</p>
+                <div class="price-row">
+                    <span class="price">48.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(48)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="slike/production.png" alt="Produkcija muzike u kućnom studiju" class="img-fluid rounded">
+                <h3 class="mt-2">Produkcija Muzike</h3>
+                <p>Naučite kako da snimite i miksate svoje pesme u sopstvenom kućnom studiju.</p>
+                <div class="price-row">
+                    <span class="price">65.00 €</span>
+                    <button type="button" class="btn btn-primary" onclick="dodato(65)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</main>
+
+<footer class="custom-footer py-4 mt-auto">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="footer-text mb-0">© 2025 KP Studios | Ksenija Pavlović</p>
+            <!--tema-->
+                         <div class="heart-container mt-5">
+                    <button id="theme-button" class="heart-btn" title="Promeni temu sajta">
+                        ❤
+                    </button>
+                    <p class="mt-2 text-muted small-text">Klikni srce za magiju!</p>
+                </div>
+                 <!--tema-->
+            <div class="social-icons d-flex gap-3">
+                <a href="#" title="Zapratite KP Studios na Pinterestu">
+                    <img src="slike/pinterest.svg" alt="Pinterest" class="social-img">
+                </a>
+                <a href="#" title="Posetite naš zvanični YouTube kanal">
+                    <img src="slike/yt.svg" alt="YouTube" class="social-img">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

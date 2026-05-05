@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP Studios - O meni</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg custom-header py-3">
+    <div class="container-fluid px-lg-5">
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                <li class="nav-item"><a class="nav-link nav-item-text" href="proizvodi.html" title="Idi na početnu stranu">Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-item-text active" href="about.html" title="Saznaj više o meni">About</a></li>
+                <li class="nav-item"><a class="nav-link nav-item-text" href="login.html" title="Prijavi se na svoj nalog">Login</a></li>
+            </ul>
+
+            <div class="mx-auto d-none d-lg-block">
+                <div class="search-container d-flex align-items-center">
+                    <input type="text" class="search-input" placeholder="Look for...">
+                    <img src="slike/src.svg" alt="Search" class="search-icon">
+                </div>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <span class="logo-text fw-bold">KP studios</span>
+                <img src="slike/avatar.svg" alt="Profilna slika" class="avatar-img">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5 flex-grow-1 text-center">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="content mb-4">O meni</h1>
+            
+            <div class="product-card p-5 mb-5">
+                <img src="slike/hippie.png" alt="Moja slika" class="profile-img rounded-circle mb-4">
+                
+                <p class="lead">
+                    Zdravo! Ja sam Ksenija Pavlović, osnivačica KP Studios. 
+                    Lorem ipsum dolor sit amet. Et aperiam quis est rerum delectus et illum voluptatem ut voluptas soluta. Nam aperiam blanditiis qui consequuntur minus non illum porro qui aspernatur beatae sit consequuntur consequatur et suscipit doloribus.
+                </p>
+                <p>
+                    Est omnis repudiandae quo omnis enim id veniam assumenda a iusto suscipit est quidem nesciunt est impedit repudiandae. Eum praesentium expedita qui illum vero in autem sint est inventore internos.
+                </p>
+
+                <div class="heart-container mt-5">
+                    <button id="theme-button" class="heart-btn" title="Promeni temu sajta">
+                        ❤
+                    </button>
+                    <p class="mt-2 text-muted small-text">Klikni srce za magiju!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="custom-footer py-4 mt-auto">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="footer-text mb-0">© 2025 KP Studios | Ksenija Pavlović</p>
+            <div class="social-icons d-flex gap-3">
+                <a href="#" title="Zapratite me na Pinterestu"><img src="slike/pinterest.svg" alt="Pinterest" class="social-img"></a>
+                <a href="#" title="Pogledajte moj YouTube kanal"><img src="slike/yt.svg" alt="YouTube" class="social-img"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

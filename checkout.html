@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP Studios - Checkout</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg custom-header py-3">
+    <div class="container-fluid px-lg-5">
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                <li class="nav-item"><a class="nav-link nav-item-text" href="proizvodi.html" title="Povratak na listu kurseva">Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-item-text" href="about.html" title="Saznajte više o autoru">About</a></li>
+                <li class="nav-item"><a class="nav-link nav-item-text" href="login.html" title="Prijavite se na nalog">Login</a></li>
+            </ul>
+
+            <div class="mx-auto d-none d-lg-block">
+                <div class="search-container d-flex align-items-center">
+                    <input type="text" class="search-input" placeholder="Look for...">
+                    <img src="slike/src.svg" alt="Search" class="search-icon">
+                </div>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <span class="logo-text fw-bold">KP studios</span>
+                <img src="slike/avatar.svg" alt="Profile" class="avatar-img" onclick="openCart()" style="cursor:pointer;" title="Vidi korpu">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5 flex-grow-1">
+    <h1 class="content mb-5">Plaćanje</h1>
+    
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="product-card p-4">
+                <h3 class="mb-4">Billing Details</h3>
+                <form id="checkout-form">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Ime</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Prezime</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold">Ulica i broj</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Grad</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Poštanski broj</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <aside class="col-lg-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4">Review your Cart</h3>
+                
+                <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+                    <img src="slike/gcourse.png" alt="Kurs" class="rounded me-3 checkout-item-img">
+                    <div class="flex-grow-1">
+                        <p class="mb-0 fw-bold checkout-item-name">Kurs za početnike u učenju gitare</p>
+                        <span class="text-muted">€49</span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Imate promo kod?</label>
+                    <div class="d-flex gap-2">
+                        <input type="text" id="promo-input" class="form-control" placeholder="Add promo code">
+                        <button type="button" class="btn btn-outline-primary" style="border: 2px solid var(--text-main); color: var(--text-main);" onclick="validateAndNotify()">Apply</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mb-4">
+                    <span class="fw-bold fs-5">Ukupno:</span>
+                    <span class="fw-bold fs-5 text-primary">€49</span>
+                </div>
+
+                <button type="submit" form="checkout-form" class="btn btn-primary w-100 py-3">Završi kupovinu</button>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="custom-footer py-4 mt-auto">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="footer-text mb-0">© 2025 KP Studios | Ksenija Pavlović</p>
+             <!--tema-->
+                         <div class="heart-container mt-5">
+                    <button id="theme-button" class="heart-btn" title="Promeni temu sajta">
+                        ❤
+                    </button>
+                    <p class="mt-2 text-muted small-text">Klikni srce za magiju!</p>
+                </div>
+                 <!--tema-->
+            <div class="social-icons d-flex gap-3">
+                <a href="#" title="Posetite naš Pinterest profil"><img src="slike/pinterest.svg" alt="Pinterest" class="social-img"></a>
+                <a href="#" title="Pogledajte naše lekcije na YouTube-u"><img src="slike/yt.svg" alt="YouTube" class="social-img"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

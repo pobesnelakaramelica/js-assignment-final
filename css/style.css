@@ -1,0 +1,234 @@
+/* Glavne boje i varijable koje koristim na celom sajtu */
+:root {
+    --tropico-color: #12CAB5; /* Boja headera */
+    --logo-color: #FFFBE2;    /* Boja teksta u navigaciji */
+    --bg-color: #F2D2B6;      /* Boja pozadine sajta */
+    --text-main: #020659;     /* Tamno plava za glavni tekst */
+    --footer-color: #0396A6;  /* Akcenat plava za detalje */
+    --white: #ffffff;
+    --card-bg: #fffaf6;       /* Svetla krem za kartice */
+}
+
+/* Osnovna podešavanja stranice */
+body {
+    background-color: var(--bg-color);
+    font-family: 'Noto Sans', 'Nunito', sans-serif;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+}
+
+/* Stilovi zaheader */
+.custom-header {
+    background-color: var(--tropico-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-text {
+    color: var(--logo-color) !important;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.nav-link.nav-item-text {
+    color: var(--logo-color) !important;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-link.nav-item-text:hover {
+    opacity: 0.8;
+}
+
+/* Pretraga u headeru */
+.search-container {
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    padding: 5px 18px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text-main);
+    font-size: 14px;
+    width: 140px;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Kartice proizvoda i glavni naslovi */
+h1.content {
+    font-weight: 800;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Slika na About stranici */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid var(--tropico-color);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--footer-color);
+}
+
+/* Glavna dugmad */
+.btn-primary {
+    background-color: var(--text-main) !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--footer-color) !important;
+    transform: scale(1.05);
+}
+
+/* Footer i ikonice socijalnih mreža */
+.custom-footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-text {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.social-img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease;
+}
+
+.social-img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Dugme srce za menjanje teme */
+.heart-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    outline: none;
+    line-height: 1;
+}
+
+.heart-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Stilovi za checkout i login stranice  */
+.checkout-item-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.checkout-item-name {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.forgot-password-link {
+    color: var(--footer-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+/* Dark mode tema */
+.dark-mode {
+    --bg-color: #2c3e50;
+    --text-main: #ecf0f1;
+    --card-bg: #34495e;
+}
+
+/* Centriranje stvari bez pisanja inline stilova */
+.text-center {
+    text-align: center !important;
+}
+
+/* Responzivni dizajn za manje ekrane */
+@media (min-width: 992px) {
+    .mx-auto {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        margin: 15px 0;
+        width: 100%;
+    }
+    .product-card img {
+        height: auto;
+    }
+}
